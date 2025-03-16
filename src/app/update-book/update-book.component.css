@@ -1,0 +1,52 @@
+#formdiv {
+    text-align: center;
+    margin-left: 370px;
+}
+
+form {
+    border: 2px solid black;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(229, 229, 82);
+}
+
+label {
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    color: purple;
+}
+
+.inputfield {
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#submitbtn {
+    width: 260px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: purple;
+    cursor: pointer;
+    border-radius: 5px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+#submitbt:hover {
+    background-color: grey;
+    color: black;
+}
+
+span {
+    font-weight: bolder;
+    font-size: 30px;
+    color: purple;
+    margin-top: 10px;
+    margin-left: -350px;
+}

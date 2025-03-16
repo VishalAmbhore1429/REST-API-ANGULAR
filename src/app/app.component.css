@@ -1,0 +1,34 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#header {
+    background-color: chocolate;
+    color: beige;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    text-decoration: none;
+    border: 1px solid black;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin: 7px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    text-align: center;
+    border-radius: 5px;
+    color: beige;
+    font-weight: bold;
+}
+
+#addbook {
+    background-color: green;
+}
+
+#showbooks {
+    background-color: purple;
+}

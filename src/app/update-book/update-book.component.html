@@ -1,0 +1,14 @@
+<h1>UPDATE BOOK HERE</h1>
+<div id="formdiv">
+    <form #bookForm="ngForm" (ngSubmit)="updateBook(bookForm.value)">
+    <label for="">Book ID</label><br>
+    <input type="text"  name="bookname" ngModel="selectedData.id"><br>
+    <label for="">Book Name</label><br>
+    <input type="text"  name="bookname" ngModel><br>
+    <label for="">Author Name</label><br>
+    <input type="text" ngModel name="authorname"><br>
+    <label for="">Book Language</label><br>
+    <input type="text" ngModel name="language"><br>
+    <button id="submitbtn">Update Book</button>
+    </form>
+</div>

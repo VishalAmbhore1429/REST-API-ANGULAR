@@ -1,0 +1,27 @@
+<br>
+<div id="spandiv"><span id="userdeleted">{{succesMessage}}</span></div>
+<table>
+    <thead>
+      <tr>
+        <th>BOOK ID</th>
+        <th>BOOK NAME</th>
+        <th>AUTHOR NAME</th>
+        <th>LANGUAGE</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for(book of booksData; track book.id){
+          <tr>
+          <td>{{book.id}}</td>
+          <td>{{book.bookname}}</td>
+          <td>{{book.authorname}}</td>
+          <td>{{book.language}}</td>
+          <td><button id="updatebook" (click)="updateBook(book.id)">Update Book</button></td>
+          <td><button id="deletebook" (click)="deleteBook(book.id)">Delete Book</button></td>
+          </tr>
+        }
+      
+    </tbody>
+  </table>

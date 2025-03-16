@@ -1,0 +1,13 @@
+<h1>ADD BOOK HERE</h1>
+<div id="formdiv">
+    <form #bookForm="ngForm" (ngSubmit)="addBook(bookForm.value)">
+    <label for="">Enter Book Name</label><br>
+    <input type="text"  name="bookname" ngModel><br>
+    <label for="">Enter Author Name</label>
+    <input type="text" ngModel name="authorname"><br>
+    <label for="">Enter Book Language</label><br>
+    <input type="text" ngModel name="language"><br>
+    <button id="submitbtn">Add Book</button>
+    </form>
+    <span>{{successMessage}}</span>
+</div>
