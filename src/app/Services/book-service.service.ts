@@ -20,7 +20,11 @@ export class BookServiceService {
     return this.http.delete("http://127.0.0.1:8000/api/deletebook/"+id);
   }
 
-  updateBook(id:any){
+  getBookData(id:any){
     return this.http.get("http://127.0.0.1:8000/api/showonebook/"+id);
+  }
+
+  updateBook(id:any,data:any){
+    return this.http.put("http://127.0.0.1:8000/api/updatebook/"+id,data);
   }
 }

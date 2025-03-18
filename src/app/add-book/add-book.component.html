@@ -2,11 +2,11 @@
 <div id="formdiv">
     <form #bookForm="ngForm" (ngSubmit)="addBook(bookForm.value)">
     <label for="">Enter Book Name</label><br>
-    <input type="text"  name="bookname" ngModel><br>
+    <input type="text"  name="bookname" ngModel required><br>
     <label for="">Enter Author Name</label>
-    <input type="text" ngModel name="authorname"><br>
+    <input type="text" ngModel name="authorname" required><br>
     <label for="">Enter Book Language</label><br>
-    <input type="text" ngModel name="language"><br>
+    <input type="text" ngModel name="language" required><br>
     <button id="submitbtn">Add Book</button>
     </form>
     <span>{{successMessage}}</span>

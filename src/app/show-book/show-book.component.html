@@ -1,5 +1,14 @@
 <br>
 <div id="spandiv"><span id="userdeleted">{{succesMessage}}</span></div>
+  <div id="updateform">
+    <form #updateBookForm="ngForm" (ngSubmit)="updateBook(getSelectedData?.id,updateBookForm.value)">
+      <input type="text" placeholder="Book name" name="bookname" [ngModel]="getSelectedData?.bookname">
+      <input type="text" placeholder="Author name" name="authorname" [ngModel]="getSelectedData?.authorname">
+      <input type="text" placeholder="Language" name="language" [ngModel]="getSelectedData?.language">
+      <button type="submit">Update Book</button>
+    </form>
+  </div>
+  <br>
 <table>
     <thead>
       <tr>
@@ -18,7 +27,7 @@
           <td>{{book.bookname}}</td>
           <td>{{book.authorname}}</td>
           <td>{{book.language}}</td>
-          <td><button id="updatebook" (click)="updateBook(book.id)">Update Book</button></td>
+          <td><button id="updatebook" (click)="selectBook(book.id)">Update Book</button></td>
           <td><button id="deletebook" (click)="deleteBook(book.id)">Delete Book</button></td>
           </tr>
         }

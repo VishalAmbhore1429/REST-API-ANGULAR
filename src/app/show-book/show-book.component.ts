@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import { BookServiceService } from '../Services/book-service.service';
-import { RouterLink,RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-show-book',
-  imports: [RouterLink,RouterOutlet],
+  imports: [FormsModule],
   templateUrl: './show-book.component.html',
   styleUrl: './show-book.component.css'
 })
 export class ShowBookComponent {
   booksData:any;
   succesMessage:any;
-  selectedData:any;
+  getSelectedData:any|undefined;
+  bookname:any;
+  authorname:any;
+  language:any;
   constructor(private bookservice:BookServiceService){
     this.showAllBooks();
   }
@@ -33,10 +36,17 @@ export class ShowBookComponent {
     })
   }
 
-  updateBook(id:string){
-    return this.bookservice.updateBook(id).subscribe((updateBookData)=>{
-      // console.log(updateBookData);
-      this.selectedData = updateBookData;
+  selectBook(id:any){
+    this.bookservice.getBookData(id).subscribe((data:any)=>{
+      console.log(data.bookname);  
+      this.getSelectedData = data;
+    })
+  }
+
+  updateBook(id:any,data:any){
+    this.bookservice.updateBook(id,data).subscribe((result)=>{
+      console.log(result);
+      
     })
   }
 }

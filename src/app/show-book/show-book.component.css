@@ -18,6 +18,7 @@ td ,th {
     background-color: blue;
     color: beige;
     border-radius: 5px;
+    
 }
 
 #deletebook {
@@ -36,4 +37,26 @@ td ,th {
 #spandiv {
     text-align: center;
     margin: 10px;
+}
+
+#updateform {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(5, 238, 250);
+}
+
+#updateform input {
+    width: 250px;
+    margin-right: 25px;
+    height: 30px;
+}
+
+#updateform button {
+    background-color: purple;
+    color: beige;
+    height: 35px;
+    width: 190px;
+    border-radius: 5px;
 }
